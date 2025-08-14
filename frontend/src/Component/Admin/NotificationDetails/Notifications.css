@@ -1,0 +1,187 @@
+/* Notifications.css */
+.notifications-page {
+   
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../../pictures/excavator-action.jpg'); /* Move background image to page */
+    background-color: rgba(255, 255, 255, 0.5); /* Fallback color with slight transparency */
+    background-blend-mode: overlay; /* Blend the image with the background color */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensure the background covers the full viewport height */
+  }
+  
+  .notifications-page h1 {
+    margin-top: 60px;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 600;
+  }
+  
+  .notifications-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque white for readability */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .notifications-table thead {
+    background-color: #3498db;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  
+  .notifications-table th,
+  .notifications-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+  }
+  
+  /* Remove the border-right for the last cell in each row */
+  .notifications-table th:last-child,
+  .notifications-table td:last-child {
+    border-right: none;
+  }
+  
+  .notifications-table th {
+    font-weight: 600;
+  }
+  
+  .notifications-table tbody tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  .notifications-table tbody tr:hover {
+    background-color: rgba(245, 247, 250, 0.8); /* Adjusted hover color */
+  }
+  
+  .notifications-table tbody td {
+    color: #34495e;
+    font-size: 0.95rem;
+  }
+  
+  .notifications-table tbody tr:nth-child(even) {
+    background-color: rgba(249, 249, 249, 0.8); /* Adjusted even row color */
+  }
+  
+  /* Style for the "No notifications found" message */
+  .notifications-table tbody td[colspan="8"] {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+    padding: 20px;
+    border-right: none;
+  }
+  
+  /* Style for the Update and Delete buttons container */
+  .notifications-table .action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  /* Style for the Update link to look like a button */
+  .notifications-table a {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notifications-table a:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Style for the Delete button */
+  .notifications-table button {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .notifications-table button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Style for the Add Notification button container */
+  .notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:10px 20px 0 450px;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the Add Notification button */
+  .add-notify-button {
+    display: inline-block;
+    background-color: #2ecc71;
+    margin-top: 60px ;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-user-button:hover {
+    background-color: #27ae60;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .notifications-table th,
+    .notifications-table td {
+      padding: 10px;
+      font-size: 0.85rem;
+    }
+  
+    .notifications-table thead {
+      font-size: 0.8rem;
+    }
+  
+    .add-user-button {
+      font-size: 0.9rem;
+      padding: 8px 15px;
+    }
+  
+    .notifications-table a,
+    .notifications-table button {
+      padding: 6px 10px;
+      font-size: 0.85rem;
+    }
+  
+    .notifications-table .action-buttons {
+      gap: 8px;
+    }
+  
+    .notifications-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .notifications-header h1 {
+      margin-bottom: 0;
+    }
+  }

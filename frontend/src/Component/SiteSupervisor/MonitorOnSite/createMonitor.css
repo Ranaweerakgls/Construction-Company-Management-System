@@ -1,0 +1,184 @@
+.create-monitor-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .create-monitor-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../pictures/createimage.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(5px);
+  }
+  
+  .form-container {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(8px) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4) !important;
+    width: 100% !important;
+    max-width: 900px !important;
+    padding: 1.5rem !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    margin: 0 auto !important;
+  }
+  
+  .form-container:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .form-title {
+    color: #2c3e50 !important;
+    font-size: 1.6rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 1.5rem !important;
+    text-align: center !important;
+  }
+  
+  .monitor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100% !important;
+  }
+  
+  .form-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+  
+  .form-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.3rem !important;
+    width: 100% !important;
+  }
+  
+  .input-field {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    width: 100%;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    background-color: white;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  .input-field:hover {
+    background-color: white;
+  }
+  
+  textarea.input-field {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  select.input-field {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.8rem center;
+    background-size: 1em;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #34495e;
+  }
+  
+  .submit-btn {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.3rem !important;
+    background: linear-gradient(to right, #3498db, #2c80d0) !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.6rem 1.2rem !important;
+    border-radius: 6px !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin-top: 1rem !important;
+    width: 100% !important;
+    max-width: 200px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
+  .submit-btn:hover {
+    background: linear-gradient(to right, #2c80d0, #2980b9) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 3px 10px rgba(52, 152, 219, 0.3) !important;
+  }
+  
+  .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+  
+  .spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .create-monitor-form {
+        padding: 0.8rem !important;
+    }
+    
+    .form-container {
+        padding: 1rem !important;
+        max-width: 100% !important;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-title {
+        font-size: 1.4rem !important;
+    }
+    
+    .submit-btn {
+        width: 100% !important;
+        max-width: none !important;
+        padding: 0.5rem 1rem !important;
+        font-size: 0.85rem !important;
+    }
+  }

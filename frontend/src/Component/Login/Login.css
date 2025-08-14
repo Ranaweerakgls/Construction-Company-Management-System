@@ -1,0 +1,225 @@
+/* Centering the login container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px); /* Adjust for nav height */
+  background: #f0f2f5;
+}
+
+/* Main login box */
+.login-box {
+  display: flex;
+  width: 100%;
+  height: 540px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* Left side with an image */
+.login-box .left-side {
+  width: 1000px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box .left-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right side with form */
+.login-box .right-side {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+}
+
+/* Login title */
+.login-box .right-side h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Styling the form groups */
+.login-box .right-side .form-group {
+  margin-bottom: 15px;
+}
+
+.login-box .right-side .form-group label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.login-box .right-side .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.login-box .right-side .form-group input:focus {
+  border-color: #667eea;
+}
+
+/* Error input styling */
+.login-box .right-side .form-group input.input-error {
+  border-color: #e53e3e;
+}
+
+/* Error message styling */
+.login-box .right-side .form-group .error-message {
+  color: #e53e3e;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* Password input container */
+.login-box .right-side .password-group {
+  margin-bottom: 15px;
+}
+.login-box .right-side .password-group .password-toggle-icon {
+  right: 12px; /* Adjust this value as needed */
+}
+.login-box .right-side .password-group {
+  width: 100%;
+}
+.login-box .right-side .password-group .password-input-container {
+  position: relative;
+  height: 100%; 
+}
+
+.login-box .right-side .password-group input {
+  width: 100%;
+  padding: 10px ; /* Right padding to prevent text under icon */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 40px; /* Fixed height */
+  box-sizing: border-box;
+}
+
+.login-box .right-side .password-group .password-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  height: 24px;
+  width: 24px;
+  align-items: center;
+}
+
+.login-box .right-side .password-group .password-toggle-icon:hover svg {
+  stroke: #333;
+}
+
+.login-box .right-side .password-group .password-toggle-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.login-box .right-side .password-group .password-toggle-icon:hover svg {
+  stroke: #333;
+}
+
+/* Login button styling */
+.login-box .right-side form button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-box .right-side form button:hover {
+  background: linear-gradient(90deg, #764ba2, #667eea);
+}
+
+/* Password reset styling */
+.login-box .right-side .reset-password {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-box .right-side .reset-password .click-here {
+  color: #00adb5;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.login-box .right-side .reset-password .click-here:hover {
+  color: #007a82;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  
+  .login-box .left-side {
+    width: 100%;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .login-box .left-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .login-box .right-side {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .login-box .left-side,
+  .login-box .right-side {
+    width: 100%;
+  }
+
+  .login-box .left-side {
+    height: 200px;
+  }
+
+  .login-box .right-side {
+    padding: 20px;
+  }
+}

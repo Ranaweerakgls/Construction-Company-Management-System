@@ -1,0 +1,149 @@
+/* AddNotification.css */
+/* Container for the entire form */
+.add-notification-container {
+    width: 100%; /* Full width of the viewport */
+    max-width: 100%; /* Ensure it spans the entire viewport width */
+    margin: 0 auto; /* Remove side margins to make it full-width */
+    padding: 30px;
+    background-image: url('../../pictures/ronnakorn-triraganon-IvEYfb-3B70-unsplash.jpg'); /* Background image for the page */
+    background-color: rgba(255, 255, 255, 0.5); /* Fallback color with slight transparency */
+    background-blend-mode: overlay; /* Blend the image with the background color */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensure the background covers the full viewport height */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex; /* Center the form */
+    flex-direction: column;
+    align-items: center; /* Center the form horizontally */
+  }
+  
+  /* Form heading */
+  .add-notification-heading {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  
+  /* Form itself */
+  .add-notification-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly more opaque background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow to match screenshot */
+    max-width: 500px; /* Set form width to 500px */
+    width: 100%; /* Ensure it takes up to 500px but scales down if needed */
+  }
+  
+  /* Form field container */
+  .add-notification-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Labels */
+  .add-notification-label {
+    font-weight: 500;
+    color: #34495e;
+    font-size: 16px;
+  }
+  
+  /* Inputs, Select, and Textarea */
+  .add-notification-input,
+  .add-notification-select,
+  .add-notification-textarea {
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Focus and hover effects for inputs and select */
+  .add-notification-input:focus,
+  .add-notification-select:focus,
+  .add-notification-textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+  }
+  
+  /* Read-only input (for notificationid) */
+  .add-notification-input[readonly] {
+    background-color: #ecf0f1;
+    cursor: not-allowed;
+  }
+  
+  /* Textarea specific styles */
+  .add-notification-textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Submit button */
+  .add-notification-button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+  }
+  
+  .add-notification-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  .add-notification-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Error messages */
+  .add-notification-error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+    font-style: italic;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .add-notification-container {
+      padding: 20px;
+    }
+  
+    .add-notification-heading {
+      font-size: 24px;
+    }
+  
+    .add-notification-form {
+      padding: 15px;
+      max-width: 100%; /* Allow form to take full width on smaller screens */
+    }
+  
+    .add-notification-input,
+    .add-notification-select,
+    .add-notification-textarea {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .add-notification-button {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+  }

@@ -1,0 +1,313 @@
+.about-us {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.about-hero {
+  position: relative;
+  height: 50vh;
+  background-image: url("https://images.unsplash.com/photo-1651195297119-afc97f14a40d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* About Content Section */
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+/* Company Overview */
+.company-overview {
+  margin-bottom: 4rem;
+}
+
+.company-overview h2 {
+  font-size: 2rem;
+  color: #1a3c34;
+  margin-bottom: 1.5rem;
+}
+
+.company-overview p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.overview-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.overview-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Team Section */
+.team-section {
+  margin-bottom: 4rem;
+}
+
+.team-section h2 {
+  font-size: 2rem;
+  color: #1a3c34;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.team-member h3 {
+  font-size: 1.5rem;
+  color: #1a3c34;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Journey Section */
+.journey-section {
+  margin-bottom: 4rem;
+  background: #e5e7eb; /* Light gray background, resembling concrete */
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/blueprint.png"); /* Blueprint texture */
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.journey-section h2 {
+  font-size: 2.5rem;
+  color: #1f2937; /* Dark gray for a professional look */
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.journey-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #facc15; /* Construction yellow accent */
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+.journey-timeline {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* Removed the vertical line */
+/* .journey-timeline::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background: #4b5563;
+  top: 0;
+  bottom: 0;
+  left: 50px;
+} */
+
+.journey-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideIn 0.6s ease-out forwards;
+  animation-delay: calc(0.2s * var(--index));
+}
+
+.journey-card:nth-child(1) {
+  --index: 1;
+}
+.journey-card:nth-child(2) {
+  --index: 2;
+}
+.journey-card:nth-child(3) {
+  --index: 3;
+}
+.journey-card:nth-child(4) {
+  --index: 4;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.journey-icon {
+  width: 50px;
+  height: 50px;
+  background: #facc15; /* Construction yellow */
+  color: #1f2937;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.journey-card:hover .journey-icon {
+  transform: scale(1.1);
+}
+
+.journey-content {
+  background: #fff;
+  padding: 1.5rem;
+  border-left: 4px solid #facc15; /* Yellow accent on the left */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journey-card:hover .journey-content {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.journey-content h3 {
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.journey-content p {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 40vh;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-content {
+    padding: 2rem 1rem;
+  }
+
+  .journey-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .journey-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .journey-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+
+  .journey-content {
+    padding: 1rem;
+  }
+
+  .journey-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .journey-content p {
+    font-size: 1rem;
+  }
+}

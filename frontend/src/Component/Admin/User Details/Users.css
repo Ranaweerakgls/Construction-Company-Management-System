@@ -1,0 +1,420 @@
+/* Wrapper for the entire page to apply the background image */
+.userdetails-page-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background: 
+      linear-gradient(rgba(245, 247, 250, 0.8), rgba(195, 207, 226, 0.1)),
+      url('../../pictures/civilEngineers.jpg') center/cover no-repeat;
+    min-height: 100vh;
+}
+
+/* Container for the Users page content */
+.userdetails-container {
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    padding-top: 80px; /* Add padding to account for the fixed navbar */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.userdetails-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.userdetails-title {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.userdetails-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.userdetails-search-input {
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+    width: 200px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.userdetails-search-input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.userdetails-role-filter {
+    padding: 8px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+    width: 120px;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.userdetails-role-filter:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.userdetails-add-user-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.userdetails-add-user-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.userdetails-button-icon {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.userdetails-table-container {
+    background: rgba(255, _processors, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.userdetails-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    background: transparent;
+}
+
+.userdetails-table th {
+    background-color: rgba(52, 73, 94, 0.75);
+    color: white;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.userdetails-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #2c3e50;
+    background: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.userdetails-table tr:last-child td {
+    border-bottom: none;
+}
+
+.userdetails-table tr:hover td {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.userdetails-action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.userdetails-btn {
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+.userdetails-btn-update {
+    background-color: rgba(39, 174, 96, 0.9);
+    color: white;
+}
+
+.userdetails-btn-update:hover {
+    background-color: rgba(33, 150, 83, 0.9);
+    transform: translateY(-1px);
+}
+
+.userdetails-btn-delete {
+    background-color: rgba(231, 76, 60, 0.9);
+    color: white;
+}
+
+.userdetails-btn-delete:hover {
+    background-color: rgba(192, 57, 43, 0.9);
+    transform: translateY(-1px);
+}
+
+.userdetails-loading-spinner {
+    text-align: center;
+    padding: 30px;
+    color: #2c3e50;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.userdetails-no-users {
+    text-align: center;
+    color: #2c3e50;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+/* New styles for the Profile button and Grid View */
+.userdetails-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.userdetails-profile-view-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f39c12;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.userdetails-profile-view-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.userdetails-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.userdetails-profile-card {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.userdetails-profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.userdetails-profile-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.userdetails-profile-icon {
+    font-size: 60px;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.userdetails-profile-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.userdetails-profile-role {
+    font-size: 14px;
+    color: #7f8c8d;
+    text-transform: capitalize;
+}
+
+.userdetails-profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.userdetails-profile-detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.userdetails-profile-label {
+    font-weight: 500;
+    font-size: 14px;
+    color: #34495e;
+}
+
+.userdetails-profile-value {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.userdetails-download-button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.userdetails-download-button:hover {
+    background-color: #45a049;
+    transform: translateY(-1px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .userdetails-container {
+        padding: 10px;
+        padding-top: 120px; /* Increase padding on mobile for stacked navbar */
+    }
+
+    .userdetails-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .userdetails-controls {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .userdetails-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .userdetails-search-input,
+    .userdetails-role-filter {
+        width: 100%;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .userdetails-add-user-button,
+    .userdetails-profile-view-button {
+        width: 100%;
+        justify-content: center;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .userdetails-table {
+        display: block;
+        overflow-x: auto;
+        font-size: 14px;
+    }
+
+    .userdetails-table th,
+    .userdetails-table td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+
+    .userdetails-action-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .userdetails-btn {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+
+    .userdetails-grid-container {
+        grid-template-columns: 1fr; /* Stack profiles on small screens */
+        padding: 10px;
+    }
+
+    .userdetails-profile-card {
+        padding: 10px;
+    }
+
+    .userdetails-profile-icon {
+        font-size: 50px;
+    }
+
+    .userdetails-profile-name {
+        font-size: 18px;
+    }
+
+    .userdetails-profile-role {
+        font-size: 12px;
+    }
+
+    .userdetails-profile-label,
+    .userdetails-profile-value {
+        font-size: 12px;
+    }
+
+    .userdetails-download-button {
+        padding: 4px 8px;
+        font-size: 12px;
+        margin-left: 5px;
+    }
+}

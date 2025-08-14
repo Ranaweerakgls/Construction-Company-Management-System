@@ -1,0 +1,30 @@
+/* Add this to your CSS or inline style file */
+
+.react-calendar {
+  background-color: #8cb7e9; /* Dark background color */
+  color: hwb(253 4% 26%); /* White text color */
+}
+
+.react-calendar__tile {
+  background-color: #e8ebf0; /* Slightly lighter background for tiles */
+  color: #1d35b8; /* White text on tiles */
+}
+
+.react-calendar__tile--active {
+  background-color: hsl(54, 93%, 55%); /* Blue for active tile */
+  color: #fff;
+}
+
+.react-calendar__month-view__weekdays {
+  background-color: #fff; /* Darker background for weekdays header */
+  color: #0d4af1; /* White text */
+}
+
+.react-calendar__navigation button {
+  background-color: #6ba5e2; /* Blue buttons for navigation */
+  color: #fff;
+}
+
+.react-calendar__navigation button:hover {
+  background-color: #004080; /* Darker blue when hovered */
+}

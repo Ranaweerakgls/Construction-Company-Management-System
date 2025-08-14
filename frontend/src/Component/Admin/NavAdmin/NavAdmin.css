@@ -1,0 +1,120 @@
+/* Navigation bar container */
+.navadmin-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #43587c; /* Dark teal background */
+    padding: 13px 50px;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+  
+  /* Brand/logo section */
+  .navadmin-brand {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .navadmin-brand-link {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navadmin-brand-link:hover {
+    color: #00ddeb; /* Light cyan on hover */
+  }
+  
+  /* Navigation links list */
+  .navadmin-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation item */
+  .navadmin-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Navigation link */
+  .navadmin-link {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for links with underline animation */
+  .navadmin-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #00ddeb; /* Light cyan underline */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .navadmin-link:hover {
+    color: #00ddeb; /* Light cyan on hover */
+  }
+  
+  .navadmin-link:hover::after {
+    width: 100%; /* Underline animation on hover */
+  }
+  
+  /* Logout button */
+  .navadmin-logout-button {
+    background-color: #dc3545; /* Red background for logout */
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navadmin-logout-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navadmin-container {
+      flex-direction: column;
+      padding: 15px;
+      gap: 15px;
+    }
+  
+    .navadmin-brand {
+      font-size: 20px;
+    }
+  
+    .navadmin-links {
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+  
+    .navadmin-link {
+      font-size: 14px;
+    }
+  
+    .navadmin-logout-button {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  }

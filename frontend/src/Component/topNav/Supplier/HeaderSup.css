@@ -1,0 +1,98 @@
+.custom-navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #fffafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.459);
+  border-radius: 5px;
+}
+
+.logo-image {
+  width: 150px;
+  margin-top: 20px;
+  margin-left: -90px;
+  height: auto;
+  max-height: 150px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  margin-left: 0; /* Ensure no extra margin */
+  margin-top: 0; /* Remove top margin to align better */
+  position: relative; /* Make this a positioned ancestor for the ::before */
+}
+
+.user-profile i {
+  font-size: 1.9rem;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+  margin-right: 10px; /* Adjust spacing */
+  margin-top: 0; /* Remove top margin */
+  color: #000;
+}
+
+.user-profile::before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: -30px; /* Position the icon closer to the username */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  font-size: 20px;
+  z-index: 1;
+  opacity: 1;
+  color: #000;
+}
+
+.navbar-nav {
+  flex-grow: 0; /* Prevent excessive growth */
+  font-size: 18px;
+  display: flex;
+  color: #000;
+  margin-left: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px; /* Consistent spacing between links */
+}
+
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: #000;
+  margin: 0; /* Remove individual margins, rely on gap */
+}
+
+.nav-item .dropdown-toggle::after {
+  display: none; /* Hide the dropdown arrow */
+}
+
+.navbar-nav .dropdown-menu {
+  right: 0;
+  border-radius: 5px;
+  margin-left: 0;
+  margin-top: 0px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgba(0, 0, 255, 0.884);
+}
+
+.navbar-nav .home:hover,
+.navbar-nav .task:hover,
+.navbar-nav .budget:hover {
+  background-color: rgba(0, 89, 255, 0.288);
+  border-radius: 10px;
+}
+
+/* Control the right-side Nav */
+.ms-auto {
+  padding-right: 20px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Add a small gap after the left Nav */
+}

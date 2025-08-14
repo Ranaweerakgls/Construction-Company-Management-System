@@ -1,0 +1,15 @@
+.custom-footer {
+    background-color: #333;
+    color: #f8f8f8;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 110px;
+    padding: 25px 0px;
+    bottom: 0px;
+    top: 20vh;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+  }

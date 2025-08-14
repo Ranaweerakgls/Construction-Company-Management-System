@@ -1,0 +1,178 @@
+/* UpdateNotification.css */
+
+/* Root Variables for Update Notification Page */
+:root {
+    --un-primary: #3b82f6; /* Vibrant Blue */
+    --un-secondary: #1e40af; /* Deep Blue */
+    --un-accent: #60a5fa; /* Light Blue */
+    --un-danger: #ef4444; /* Red */
+    --un-success: #10b981; /* Green */
+    --un-background: #f9fafb; /* Light Gray */
+    --un-dark: #1f2937; /* Dark Gray */
+    --un-card-bg: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    --un-text-light: #e5e7eb; /* Light Gray Text */
+    --un-border: #d1d5db; /* Gray Border */
+    --un-transition: all 0.3s ease-in-out;
+  }
+  
+  /* Reset and Base Styles */
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  /* Background Image for the Body */
+  .un-update-notification {
+    min-height: 100vh;
+    background-image: url('../../pictures/excavator-action.jpg'); /* Beach background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  /* Overlay to improve readability */
+  .un-update-notification::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent dark overlay */
+    z-index: 1;
+  }
+  
+  /* Ensure content is above the overlay */
+  .un-update-notification > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Title Styles */
+  .un-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 55px;
+    color: var(--un-text-light);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Form Styles */
+  .un-form {
+    background: var(--un-card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(5px); /* Add a blur effect to the form background */
+  }
+  
+  /* Form Group Styles */
+  .un-form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .un-form-group label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--un-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .un-form-group input,
+  .un-form-group textarea,
+  .un-form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--un-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--un-dark);
+    background: #fff;
+    transition: var(--un-transition);
+  }
+  
+  .un-form-group input:focus,
+  .un-form-group textarea:focus,
+  .un-form-group select:focus {
+    outline: none;
+    border-color: var(--un-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .un-form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  /* Error Message Styles */
+  .un-error-message {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--un-danger);
+    margin-top: 0.25rem;
+  }
+  
+  /* Submit Button Styles */
+  .un-submit-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--un-primary);
+    color: var(--un-text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--un-transition);
+  }
+  
+  .un-submit-button:hover {
+    background: var(--un-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Loading and Error States */
+  .un-loading,
+  .un-error {
+    font-size: 1.25rem;
+    color: var(--un-text-light);
+    text-align: center;
+    background: var(--un-card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .un-error {
+    color: var(--un-danger);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .un-update-notification {
+      padding: 1rem;
+    }
+  
+    .un-form {
+      padding: 1.5rem;
+    }
+  
+    .un-title {
+      font-size: 1.75rem;
+    }
+  }

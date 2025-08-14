@@ -1,0 +1,102 @@
+.head-custom-navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #fffafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.459);
+  border-radius: 5px;
+  top: 0;
+  width: 100%;
+}
+
+.head-nav-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.head-logo-image {
+  width: 150px;
+  height: auto;
+  max-height: 150px;
+  margin-top: 20px;
+}
+
+.head-navbar-nav {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.head-nav-link {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.head-nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.head-user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.head-username {
+  font-weight: bold;
+  color: #000;
+  margin-right: 10px;
+}
+
+.head-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: none;
+}
+
+.head-user-profile:hover .head-dropdown-menu {
+  display: block;
+}
+
+.head-nav-link:hover,
+.dropdown-item:hover {
+  color: rgba(0, 0, 255, 0.884);
+  background-color: rgba(0, 89, 255, 0.288);
+  border-radius: 10px;
+}
+
+.head-login-btn {
+  background-color: #007bff; /* Changed to blue */
+  color: white !important;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.head-login-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .head-navbar-nav { /* Fixed class name */
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .head-nav-container { /* Fixed class name */
+    flex-direction: column;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,103 @@
+.im-custom-navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: #fffafa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.459);
+  border-radius: 5px;
+}
+
+.im-logo-image {
+  width: 150px;
+  margin-top: 20px;
+  margin-left: -90px;
+  height: auto;
+  max-height: 150px;
+}
+
+.im-user-profile {
+  display: flex;
+  align-items: center;
+  margin-left: 0; /* Remove large margin to let ms-auto handle positioning */
+  margin-top: 0; /* Align with navbar */
+  position: relative;
+}
+
+.im-user-profile i {
+  font-size: 1.9rem;
+  margin-right: 10px;
+}
+
+.im-username {
+  font-weight: bold;
+  margin-right: 10px; /* Add spacing between username and icon */
+  margin-top: 0; /* Align with navbar */
+  color: #000;
+}
+
+.im-user-profile::before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: -25px; /* Position icon to the right of username */
+  top: 50%; /* Center vertically relative to user-profile */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  font-size: 20px; /* Slightly smaller for better balance */
+  z-index: 1;
+  opacity: 1;
+  color: #000;
+}
+
+.im-navbar-nav {
+  flex-grow: 5;
+  font-size: larger;
+  display: flex;
+  color: #000;
+  margin-left: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.im-navbar-nav .nav-link {
+  font-weight: bold;
+  color: #000;
+  margin: 0 30px;
+}
+
+.nav-item .dropdown-toggle::after {
+  display: none; /* Hide the default dropdown arrow */
+}
+
+.im-navbar-nav .dropdown-menu {
+  right: 0; /* Align dropdown to the right edge of user-profile */
+  left: auto; /* Ensure it doesn't stretch to the left */
+  border-radius: 5px;
+  margin-left: 0; /* Remove large margin */
+  margin-top: 5px; /* Small margin to avoid overlap */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.im-navbar-nav .nav-link:hover {
+  color: rgba(0, 0, 255, 0.884);
+}
+
+.im-navbar-nav .im-home:hover {
+  background-color: rgba(0, 89, 255, 0.288);
+  border-radius: 10px;
+}
+
+.im-navbar-nav .im-additem:hover {
+  background-color: rgba(0, 89, 255, 0.288);
+  border-radius: 10px;
+}
+
+.im-navbar-nav .im-checkInv:hover {
+  background-color: rgba(0, 89, 255, 0.288);
+  border-radius: 10px;
+}
+
+.im-navbar-nav .im-placeorder:hover {
+  background-color: rgba(0, 89, 255, 0.288);
+  border-radius: 10px;
+}

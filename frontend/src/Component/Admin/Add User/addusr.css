@@ -1,0 +1,73 @@
+/* Scoped styles for the AddUser component */
+.add-user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.add-user-table-header,
+.add-user-table-cell {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  background: transparent;
+}
+
+.add-user-table-header {
+  background: #007bff;
+  color: white;
+}
+
+.add-user-button-update {
+  padding: 6px 15px;
+  text-decoration: none;
+  margin-right: 10px;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #28a745;
+}
+
+.add-user-button-delete {
+  padding: 6px 15px;
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #dc3545;
+}
+
+.add-user-button-download {
+  padding: 6px 15px;
+  color: white;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: #0c81fd;
+  margin-left: 10px;
+}
+
+.add-user-button-delete:hover {
+  background: #c82333;
+}
+
+.add-user-button-download:hover {
+  background: #0c81fd;
+}
+
+.add-user-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Ensure the font is applied only to this component */
+.add-user-table {
+  font-family: Arial, sans-serif;
+}

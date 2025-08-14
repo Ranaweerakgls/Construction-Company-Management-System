@@ -1,0 +1,61 @@
+/* Announcement Section */
+.announcement {
+    background: #c4ddee;
+    color: #0b1d49;
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Centering the content between announcement and footer */
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh; /* Adjusts to keep content in the middle */
+    text-align: center;
+  }
+  
+  /* Flex container for button and chart */
+  .content-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #0d67c8;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Small Chart Container */
+  .small-chart-container {
+    width: 450px; /* Adjusted size */
+    background-color: #c4ddee;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
