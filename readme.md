@@ -11,8 +11,11 @@ This system helps project managers, engineers, contractors, and clients collabor
   -Role-based access control (Project Manager,
    Worker, Finance Manager, Machinery Operator,
    Inventory Manager, Supplier, Site Supervisor, Client).
+  
   -Manage user accounts and permissions.
+  
   -Secure login and authentication.
+  
 
 - **Project Management**
   -Create, update, and archive construction projects.
