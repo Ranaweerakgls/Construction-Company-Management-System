@@ -100,11 +100,11 @@ This system helps project managers, engineers, contractors, and clients collabor
 
 - **Client Portal**
   
-  -View project progress and milestones.
+  View project progress and milestones.
   
-  -Receive announcements and updates.
+  Receive announcements and updates.
   
-  -Submit additional requirements or feedback.
+  Submit additional requirements or feedback.
 
 - **User Roles & Permissions**
   
