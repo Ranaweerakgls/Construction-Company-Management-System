@@ -108,8 +108,3 @@ This system helps project managers, engineers, contractors, and clients collabor
 - **MongoDB** 
 - Git
 
----
-
-## site images
-
-![home page](Site%20Photoes/Screenshot%20(720).png)
